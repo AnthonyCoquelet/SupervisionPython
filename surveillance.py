@@ -3,7 +3,7 @@ import psutil
 import time
 import config
 ospc= os.name
-fichier_Log = open(nom_Fichier,time.time,"a")
+fichier_Log = open(config.nom_Fichier,time.time,"a")
 monitoring = bool(True)
 def os():
     if ospc == "nt":
@@ -13,18 +13,18 @@ def os():
 def cpu ():
     x= psutil.cpu_percent(1)
     fichier_Log.write("Le CPU est utiliser à {} %","\n".format(x))
-    if x >= 70:
+    if x >= config.cpu:
         print("Attention : Surcharge du processeur.")
 def ram():
     y=psutil.virtual_memory().percent
     fichier_Log.write("La RAM est utiliser à {} %","\n".format(y))
-    if y >= 70:
+    if y >= config.ram:
         print("Attention : Surcharge de la RAM.")
 
 os()
 while monitoring == True :
-    fichier_Log = open(nom_Fichier,time.time,"a")
-    time.sleep(slp)
+    fichier_Log = open(config.nom_Fichier,time.time,"a")
+    time.sleep(config.slp)
     cpu()
     ram()
     fichier_Log.close()
