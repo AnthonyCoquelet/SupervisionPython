@@ -1,10 +1,10 @@
 import os
 import psutil
 import time
+import config.py
 ospc= os.name
-fichier_Log = open("Monitoring.txt","a")
+fichier_Log = open(nom_Fichier,time.time,"a")
 monitoring = bool(True)
-slp = int(input("Combien de temps voulez-vous entre deux executions ?"))
 def os():
     if ospc == "nt":
         fichier_Log.write("L'Os de l'ordinateur est Windows","\n")
