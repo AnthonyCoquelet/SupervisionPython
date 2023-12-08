@@ -6,4 +6,4 @@ cpu = 70
 slp = 10
 
 #Nom du fichier de log
-nom_Fichier = "logs"
+nom_Fichier = "logs.txt"
