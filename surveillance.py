@@ -3,7 +3,7 @@ import psutil
 import time
 import config
 ospc= os.name
-fichier_Log = open(config.nom_Fichier,time.time,"a")
+fichier_Log = open((config.nom_Fichier,time.time),"a")
 monitoring = bool(True)
 def os():
     if ospc == "nt":
