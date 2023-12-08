@@ -20,6 +20,7 @@ def ram():
 
 os()
 while monitoring == True :
+    fichier_Log = open("Monitoring.txt","a")
     time.sleep(slp)
     cpu()
     ram()
