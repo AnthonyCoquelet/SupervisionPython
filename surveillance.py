@@ -2,6 +2,7 @@ import os
 import psutil
 import time
 import config
+import alrtEmail
 ospc= os.name
 fichier_Log = open((config.nom_Fichier,time.time),"a")
 monitoring = bool(True)
