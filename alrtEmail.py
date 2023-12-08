@@ -9,7 +9,7 @@ email_address = "test@gmail.com"
 email_password = "test"
 
 #Infos du mail destinataire.
-email_receiver = "anthony.coquelet@ecoles-epsi.net"
+email_receiver = "test2@gmail.com"
 
 # Création la connexion
 context = ssl.create_default_context()
