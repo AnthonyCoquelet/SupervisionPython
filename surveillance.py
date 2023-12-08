@@ -3,7 +3,6 @@ import psutil
 import time
 import config.py
 ospc= os.name
-fichier_Log = open(nom_Fichier,time.time,"a")
 monitoring = bool(True)
 def os():
     if ospc == "nt":
@@ -23,7 +22,7 @@ def ram():
 
 os()
 while monitoring == True :
-    fichier_Log = open("Monitoring.txt","a")
+    fichier_Log = open(nom_Fichier,time.time,"a")
     time.sleep(slp)
     cpu()
     ram()
