@@ -23,3 +23,4 @@ while monitoring == True :
     time.sleep(slp)
     cpu()
     ram()
+    fichier_Log.close()
