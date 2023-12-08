@@ -13,9 +13,13 @@ def os():
 def cpu ():
     x= psutil.cpu_percent(1)
     fichier_Log.write("Le CPU est utiliser à {} %","\n".format(x))
+    if x >= 70:
+        print("Attention : Surcharge du processeur.")
 def ram():
     y=psutil.virtual_memory().percent
     fichier_Log.write("La RAM est utiliser à {} %","\n".format(y))
+    if y >= 70:
+        print("Attention : Surcharge de la RAM.")
 
 os()
 while monitoring == True :
