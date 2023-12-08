@@ -1,8 +1,9 @@
 import os
 import psutil
 import time
-import config.py
+import config
 ospc= os.name
+fichier_Log = open(nom_Fichier,time.time,"a")
 monitoring = bool(True)
 def os():
     if ospc == "nt":
