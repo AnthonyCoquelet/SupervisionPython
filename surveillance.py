@@ -11,7 +11,6 @@ def os():
     else :
         fichier_Log.write("L'Os de l'ordinateur n'est pas Windows","\n")
 def cpu ():
-    
     x= psutil.cpu_percent(1)
     fichier_Log.write("Le CPU est utiliser à {} %","\n".format(x))
 def ram():
